@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre">
+    <VerticalStackLayout Padding="15" Spacing="5">
+
+        <Label Text="Gold Resort App" FontSize="Header" VerticalOptions="Center"  HorizontalOptions="Center"  Margin="0,15,0,0"/>
+
+        <Label Text="Desenvolvimento:" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="16" FontAttributes="Bold" Margin="0,30,0,15"/>
+
+        <Label Text="Paulo Medeiros" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="14"/>
+
+        <Label Text="2025" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="14"/>
+
+        <Label Text="Versão: 1.0.0" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="14"/>
+
+        <Label Text="Este aplicativo foi desenvolvido como projeto de estudo para o curso Técnico em Desenvolvimento de Sistemas da Etec." VerticalOptions="Center"  HorizontalOptions="Center" HorizontalTextAlignment="Justify" FontSize="14"/>
+
+        <Label Text="Tecnologias Utilizadas" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="16" FontAttributes="Bold" Margin="0,30,0,15"/>
+
+        <Label Text=".NET MAUI (C# e XAML)" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="14"/>
+        
+        <Label Text="Visual Studio 2022" VerticalOptions="Center"  HorizontalOptions="Center" FontSize="14"/>
+
+    </VerticalStackLayout>
+</ContentPage>

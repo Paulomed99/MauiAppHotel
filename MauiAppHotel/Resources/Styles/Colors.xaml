@@ -6,7 +6,14 @@
 
     <!-- Note: For Android please see also Platforms\Android\Resources\values\colors.xml -->
 
-    <Color x:Key="Primary">#512BD4</Color>
+    <!-- Paleta Luxuosa -->
+    <Color x:Key="Primaria">#14213d</Color>
+    <Color x:Key="Texto">#fca311</Color>
+    <Color x:Key="Secundaria">#e5e5e5</Color>
+    <Color x:Key="Terciaria">#000000</Color>
+    <Color x:Key="Branco">#ffffff</Color>
+
+    <Color x:Key="Primary">#14213d</Color>
     <Color x:Key="PrimaryDark">#ac99ea</Color>
     <Color x:Key="PrimaryDarkText">#242424</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>

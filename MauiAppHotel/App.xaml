@@ -9,6 +9,20 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="ZalandoSansRegular"/>
+                <Setter Property="TextColor" Value="{StaticResource Texto}" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primaria}"/>
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+                <Setter Property="Shell.NavBarIsVisible" Value="False" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Secundaria}"/>
+                <Setter Property="TextColor" Value="{StaticResource Terciaria}"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
