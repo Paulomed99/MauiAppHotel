@@ -26,7 +26,7 @@
 
                     </Grid>
 
-                    <Picker x:Name="pck_quarto" Title="Selecione sua acomodação" TitleColor="{StaticResource Texto}"/>
+                    <Picker x:Name="pck_quarto" Title="Selecione sua acomodação" TitleColor="{StaticResource Texto}" ItemDisplayBinding="{Binding descricao}"/>
 
                     <Border Padding="10" Margin="10">
                         <VerticalStackLayout>
@@ -42,7 +42,7 @@
                         </VerticalStackLayout>
                     </Border>
 
-                    <Button Text="Avançar"/>
+                    <Button Text="Avançar" Clicked="Button_Clicked"/>
 
                 </VerticalStackLayout>
             </Border>
