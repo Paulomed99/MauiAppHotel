@@ -13,5 +13,11 @@ namespace MauiAppHotel.Models
         public double valorDiariaAdulto { get; set; }
 
         public double valorDiariaCrianca { get; set; }
+
+        public string caminhoFotoQuarto { get; set; }
+
+        public int maxAdultos { get; set; }
+
+        public int maxCriancas { get; set; }
     }
 }

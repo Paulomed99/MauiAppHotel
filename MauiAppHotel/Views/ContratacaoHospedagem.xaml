@@ -18,22 +18,24 @@
 
                         <Label Grid.Row="0" Grid.Column="0" Text="Adultos:"/>
                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}" BindingContext="{x:Reference stp_adultos}"/>
-                        <Stepper Grid.Row="0" Grid.Column="3" x:Name="stp_adultos" Minimum="0" Maximum="10" Increment="1"></Stepper>
+                        <Stepper Grid.Row="0" Grid.Column="3" x:Name="stp_adultos" Minimum="0" Maximum="{Binding Source={x:Reference pck_quarto}, Path=SelectedItem.maxAdultos}" Increment="1"></Stepper>
 
                         <Label Grid.Row="1" Grid.Column="0" Text="Crianças:"/>
                         <Label Grid.Row="1" Grid.Column="1" Text="{Binding Value}" BindingContext="{x:Reference stp_criancas}"/>
-                        <Stepper Grid.Row="1" Grid.Column="3" x:Name="stp_criancas" Minimum="0" Maximum="10" Increment="1"></Stepper>
+                        <Stepper Grid.Row="1" Grid.Column="3" x:Name="stp_criancas" Minimum="0" Maximum="{Binding Source={x:Reference pck_quarto}, Path=SelectedItem.maxCriancas}" Increment="1"></Stepper>
 
                     </Grid>
 
                     <Picker x:Name="pck_quarto" Title="Selecione sua acomodação" TitleColor="{StaticResource Texto}" ItemDisplayBinding="{Binding descricao}"/>
 
+                    <Image x:Name="img_quarto_selecionado" HeightRequest="100" WidthRequest="300" Source="{Binding Source={x:Reference pck_quarto}, Path=SelectedItem.caminhoFotoQuarto}" Margin="0,10,0,0"/>
+
                     <Border Padding="10" Margin="10">
                         <VerticalStackLayout>
                             <Label Text="Período de estadia"/>
                             <HorizontalStackLayout>
-                                <Label Text="Check-in"/>
-                                <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy"/>
+                                <Label Text="Check-in"/>    
+                                <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy" DateSelected="dtpck_checkin_DateSelected"/>
                             </HorizontalStackLayout>
                             <HorizontalStackLayout>
                                 <Label Text="Check-out"/>

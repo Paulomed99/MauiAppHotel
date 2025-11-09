@@ -12,6 +12,12 @@ public partial class ContratacaoHospedagem : ContentPage
 
 		pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
 
+		dtpck_checkin.MinimumDate = DateTime.Now;
+		dtpck_checkin.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
+
+		dtpck_checkout.MinimumDate = dtpck_checkin.MinimumDate.AddDays(1);
+		dtpck_checkout.MaximumDate = dtpck_checkin.MaximumDate.AddMonths(6);
+
 	}
 
 	
@@ -33,4 +39,15 @@ public partial class ContratacaoHospedagem : ContentPage
 			DisplayAlert("Ops", ex.Message, "OK");
 		}
     }
+
+    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+    {
+		DatePicker elemento = sender as DatePicker;
+
+		DateTime dataSelecionadoCheckIn = elemento.Date;
+
+		dtpck_checkout.MinimumDate = dataSelecionadoCheckIn.AddDays(1);
+		dtpck_checkout.MaximumDate = dataSelecionadoCheckIn.AddMonths(6);
+    }
+
 }
